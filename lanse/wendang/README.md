@@ -26,4 +26,5 @@
 <hr>
 
 [览色APP官网](https://app.baiyi.ink/lanse/)
-[联系作者邮箱：](2766521276@qq.com)
+<br>
+[联系作者邮箱：2766521276@qq.com](2766521276@qq.com)
