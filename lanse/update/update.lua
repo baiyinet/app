@@ -1,4 +1,3 @@
-
 --白衣远程更新/2766521276
 function 更新弹窗(version, size, changelog)
   -- 更新弹窗调用
@@ -211,9 +210,9 @@ import "android.graphics.drawable.GradientDrawable"
   linecd.setBackgroundDrawable(圆角1)
 
   function gengxin.onClick()
-    print("正在前往官网下载")
+    print("正在前往更新")
     
-            url="https://www.deepsea.xin/"更新地址--更新地址
+            url="https://www.deepsea.xin/"--更新地址
             viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
             activity.startActivity(viewIntent)
             activity.finish()
@@ -229,8 +228,7 @@ import "android.graphics.drawable.GradientDrawable"
 update_dialog.dismiss()
   end
 
-  end
-
+end
 
 --网络判断
 local wl = activity.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE).getActiveNetworkInfo()
@@ -256,7 +254,7 @@ Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(c
     版本 = content:match("【版本】(.-)【版本】")
     大小 = content:match("【软件大小】(.-)【软件大小】")
     文本 = content:match("【内容】(.-)【内容】")
-  if 更新 <= 当前版本 then
+    if 更新 <= 当前版本 then
       --print("恭喜，当前是最新版本")
     else
       -- 传递提取的信息到更新弹窗函数
@@ -266,7 +264,6 @@ Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(c
     --print("服务器连接超时")
   end
 end)--获取远程文本数据结束
-    
-end)
-  
+
+  end)
 end
