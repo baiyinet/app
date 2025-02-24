@@ -256,8 +256,7 @@ Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(c
     版本 = content:match("【版本】(.-)【版本】")
     大小 = content:match("【软件大小】(.-)【软件大小】")
     文本 = content:match("【内容】(.-)【内容】")
-    更新地址 = content:match("【更新地址】(.-)【更新地址】")
-    if 更新 <= 当前版本 then
+  if 更新 <= 当前版本 then
       --print("恭喜，当前是最新版本")
     else
       -- 传递提取的信息到更新弹窗函数
