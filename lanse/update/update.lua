@@ -210,7 +210,15 @@ import "android.graphics.drawable.GradientDrawable"
   圆角1.setCornerRadii({0, 0, 0, 0, 00, 00, 15, 15})
   linecd.setBackgroundDrawable(圆角1)
 
-  
+  function gengxin.onClick()
+    print("正在前往官网下载")
+    
+            url="https://www.deepsea.xin/"更新地址--更新地址
+            viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
+            activity.startActivity(viewIntent)
+            activity.finish()
+    
+  end
 
   function shaohou.onClick()
   print("下次是哪次，改天是哪天！")
@@ -220,16 +228,8 @@ import "android.graphics.drawable.GradientDrawable"
   function xxx.onClick()
 update_dialog.dismiss()
   end
-function gengxin.onClick()
-    print("正在前往官网下载")
-    
-            url="https://www.deepsea.xin/"更新地址--更新地址
-            viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
-            activity.startActivity(viewIntent)
-            activity.finish()
-    
+
   end
-  end)
 
 
 --网络判断
@@ -267,6 +267,6 @@ Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(c
   end
 end)--获取远程文本数据结束
     
-end
+end)
   
 end
