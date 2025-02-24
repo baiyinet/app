@@ -259,9 +259,9 @@ Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(c
   end
 end)--获取远程文本数据结束
 
-  end)
 
-function gengxin.onClick()
+
+      function gengxin.onClick()
     print("正在前往官网下载")
     
             url=""..更新地址--更新地址
@@ -270,6 +270,11 @@ function gengxin.onClick()
             activity.finish()
     
   end
+
+      
+  end)
+
+
 
   
 end
