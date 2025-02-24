@@ -220,8 +220,15 @@ import "android.graphics.drawable.GradientDrawable"
   function xxx.onClick()
 update_dialog.dismiss()
   end
-
-end
+function gengxin.onClick()
+    print("正在前往官网下载")
+    
+            url=""..更新地址--更新地址
+            viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
+            activity.startActivity(viewIntent)
+            activity.finish()
+    
+  end
 
 --网络判断
 local wl = activity.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE).getActiveNetworkInfo()
@@ -261,18 +268,14 @@ end)--获取远程文本数据结束
 
 
 
-      function gengxin.onClick()
-    print("正在前往官网下载")
-    
-            url=""..更新地址--更新地址
-            viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
-            activity.startActivity(viewIntent)
-            activity.finish()
-    
-  end
+      
 
       
   end)
+
+
+  
+end
 
 
 
