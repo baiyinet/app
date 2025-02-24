@@ -210,15 +210,7 @@ import "android.graphics.drawable.GradientDrawable"
   圆角1.setCornerRadii({0, 0, 0, 0, 00, 00, 15, 15})
   linecd.setBackgroundDrawable(圆角1)
 
-  function gengxin.onClick()
-    print("正在前往更新")
-    
-            url="https://app.baiyi.ink/lanse/"--更新地址
-            viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
-            activity.startActivity(viewIntent)
-            activity.finish()
-    
-  end
+  
 
   function shaohou.onClick()
   print("下次是哪次，改天是哪天！")
@@ -255,6 +247,7 @@ Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(c
     版本 = content:match("【版本】(.-)【版本】")
     大小 = content:match("【软件大小】(.-)【软件大小】")
     文本 = content:match("【内容】(.-)【内容】")
+    更新地址 = content:match("【更新地址】(.-)【更新地址】")
     if 更新 <= 当前版本 then
       --print("恭喜，当前是最新版本")
     else
@@ -268,3 +261,14 @@ end)--获取远程文本数据结束
 
   end)
 end
+
+
+function gengxin.onClick()
+    print("正在前往官网下载")
+    
+            url=""..更新地址--更新地址
+            viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
+            activity.startActivity(viewIntent)
+            activity.finish()
+    
+  end
