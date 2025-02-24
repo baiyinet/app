@@ -223,12 +223,14 @@ update_dialog.dismiss()
 function gengxin.onClick()
     print("正在前往官网下载")
     
-            url=""..更新地址--更新地址
+            url="https://www.deepsea.xin/"更新地址--更新地址
             viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
             activity.startActivity(viewIntent)
             activity.finish()
     
   end
+  end)
+
 
 --网络判断
 local wl = activity.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE).getActiveNetworkInfo()
@@ -265,21 +267,7 @@ Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(c
     --print("服务器连接超时")
   end
 end)--获取远程文本数据结束
-
-
-
-      
-
-      
-  end)
-
-
+    
+end
   
 end
-
-
-
-  
-end
-
-
