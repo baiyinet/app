@@ -212,7 +212,7 @@ import "android.graphics.drawable.GradientDrawable"
   function gengxin.onClick()
     print("正在前往更新")
     
-            url="https://www.deepsea.xin/"--更新地址
+            url="https://www.deepsea.xin/览色.apk"--更新地址
             viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
             activity.startActivity(viewIntent)
             activity.finish()
