@@ -210,9 +210,9 @@ import "android.graphics.drawable.GradientDrawable"
   linecd.setBackgroundDrawable(圆角1)
 
   function gengxin.onClick()
-
+    print("正在下载，请前往通知栏查看")
     系统下载("览色.apk","https://www.deepsea.xin/览色.apk")
-    
+    activity.finish()
   end
 
   function shaohou.onClick()
