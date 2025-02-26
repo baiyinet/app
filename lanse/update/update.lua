@@ -191,8 +191,9 @@ import "android.graphics.drawable.GradientDrawable"
 
   dialog = AlertDialog.Builder(this)
   update_dialog = dialog.show()
-  -- update_dialog.setCanceledOnTouchOutside(false)--设置点击外部区域不关闭弹窗
-  -- update_dialog.setCancelable(false)--禁用返回键
+  --强制更新
+   update_dialog.setCanceledOnTouchOutside(false)--设置点击外部区域不关闭弹窗
+   update_dialog.setCancelable(false)--禁用返回键
   update_dialog.getWindow().setContentView(loadlayout(layout))
   import "android.graphics.drawable.ColorDrawable"
   update_dialog.getWindow().setBackgroundDrawable(ColorDrawable(0x00000000))
@@ -217,11 +218,11 @@ import "android.graphics.drawable.GradientDrawable"
 
   function shaohou.onClick()
   print("下次是哪次，改天是哪天！")
-  update_dialog.dismiss()
+  --update_dialog.dismiss()
   end
 
   function xxx.onClick()
-update_dialog.dismiss()
+--update_dialog.dismiss()
   end
 
 end
