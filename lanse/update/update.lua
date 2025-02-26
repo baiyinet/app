@@ -211,29 +211,6 @@ import "android.graphics.drawable.GradientDrawable"
 
   function gengxin.onClick()
 
-    function 系统下载(文件名,下载链接)
-  import "android.content.Context"
-  import "android.net.Uri"
-  downloadManager=activity.getSystemService(Context.DOWNLOAD_SERVICE);
-  url=Uri.parse(下载链接);
-  request=DownloadManager.Request(url);
-
-  request.setTitle(文件名);--通知标题
-  request.setDescription("正在下载");--通知描述
-  --request.setMimeType("application/cn.trinea.download.file");
-  --设置下载的文件类型，这里下载的APP
-  request.setMimeType("application/vnd.android.package-archive");
-
-  --wifi，移动网络(数据流量)都可以下载
-  request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE|DownloadManager.Request.NETWORK_WIFI);
-  --存放文件夹,下载文件名
-  request.setDestinationInExternalPublicDir("Download",文件名);
-  --通知提示，VISIBILITY_VISIBLE_NOTIFY_COMPLETED表示下载完成后显示通知栏提示。VISIBILITY_HIDDEN表示不显示任何通知栏提示
-  request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-
-  downloadManager.enqueue(request);
-end
-
     系统下载("览色.apk","https://www.deepsea.xin/览色.apk")
     
   end
