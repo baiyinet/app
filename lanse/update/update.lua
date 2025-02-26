@@ -247,7 +247,7 @@ import "com.google.android.material.dialog.MaterialAlertDialogBuilder"
 import "com.androlua.Http"
 packinfo = this.getPackageManager().getPackageInfo(this.getPackageName(), ((32552732/2/2-8183)/10000-6-231)/9)
 当前版本 = tostring(packinfo.versionName)
-Http.get("https://app.baiyi.ink/lanse/update/text.lua", nil, nil, nil,function(code, content)
+Http.get("https://baiyinet.github.io/app/lanse/update/text.lua", nil, nil, nil,function(code, content)
   if code == 200 then
     content = content:gsub("。", "\n") or content
     更新 = content:match("【版本】(.-)【版本】")
