@@ -212,7 +212,7 @@ import "android.graphics.drawable.GradientDrawable"
   function gengxin.onClick()
     print("正在下载，请前往通知栏查看")
     系统下载("览色.apk","https://www.deepsea.xin/览色.apk")
-    activity.finish()
+    update_dialog.dismiss()
   end
 
   function shaohou.onClick()
