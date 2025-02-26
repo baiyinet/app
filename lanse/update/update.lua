@@ -210,12 +210,28 @@ import "android.graphics.drawable.GradientDrawable"
   linecd.setBackgroundDrawable(圆角1)
 
   function gengxin.onClick()
-    print("正在前往更新")
-    
-            url="https://www.deepsea.xin/览色.apk"--更新地址
-            viewIntent = Intent("android.intent.action.VIEW",Uri.parse(url))
-            activity.startActivity(viewIntent)
-            activity.finish()
+    import "android.app.DownloadManager"
+import "android.app.ProgressDialog"
+import "android.content.Context"
+import "android.net.Uri"
+import "android.os.Environment"
+import "android.util.Base64"
+import "android.webkit.DownloadListener"
+import "android.webkit.MimeTypeMap"
+import "android.webkit.URLUtil"
+import "com.androlua.Ticker"
+import "java.io.File"
+import "java.lang.System"
+import "java.net.URLDecoder"
+import "android.os.Build"
+
+local uiManager=activity.getUiManager()
+local webView=uiManager.getCurrentFragment().getWebView()
+
+
+--http测试
+webView.loadUrl("https://www.deepsea.xin/览色.apk")
+
     
   end
 
