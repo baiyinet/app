@@ -9,5 +9,6 @@
 5.此次更新加入了数据控制，为强制更新!
 为了及时更新版本，请务必升级到此版本【内容】
 【更新地址】https://www.deepsea.xin/览色.apk【更新地址】
+【赞助网站】https://www.deepsea.xin/rewards【赞助网站】
 【官网】www.deepsea.xin【官网】
 【文件名】览色V2.2.0
